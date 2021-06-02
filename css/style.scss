@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-origin: border-box;
+}
+
+body{
+     font-family:sans-serif ;
+    font-size: 20px;
+}
+.container{
+height: 100vh;
+
+}
+
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px ;
+    color: red;
+}
+
+
+
+.header{
+    height: 10%;
+    border: 2px solid red ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        font-size: 4vw;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-size: 2.5vw;
+
+       
+    }
+}
+
+
+.main {
+    height:80%;
+    border:2px solid green ;
+
+    display: flex;
+    flex-direction: row;
+
+    &__image{
+        background-image: url('../rs/Malik.jpg');
+        background-size: contain;
+     width: 50%;
+    }
+    &__text{
+        width: 50%;
+}
+}
+
+.footer{
+    height: 10%;
+    border:10px solid black
+}
+
+
+
+
