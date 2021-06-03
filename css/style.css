@@ -1,5 +1,5 @@
 * {
-  margin: 0px;
+  margin: 0px 5px;
   padding: 0px;
   background-origin: border-box;
 }
@@ -13,19 +13,8 @@ body {
   height: 100vh;
 }
 
-#size {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 35px;
-  color: red;
-}
-
 .header {
   height: 10%;
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +48,6 @@ body {
 
 .main {
   height: 80%;
-  border: 2px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,18 +57,114 @@ body {
           flex-direction: row;
 }
 
-.main__image {
+.main .__image {
   background-image: url("../rs/Malik.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
   width: 50%;
+  margin: 0px;
+  border-radius: 8px;
+  background-position: left center;
+  border-radius: 10% 20%;
+  background-size: 100%;
 }
 
-.main__text {
+.main .__text {
   width: 50%;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .__text .main__text-1, .main .__text .main__text-2, .main .__text .main__text-3, .main .__text .main__text-4 {
+  font-size: 5vw;
 }
 
 .footer {
   height: 10%;
-  border: 10px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20%;
+}
+
+.footer [class^="footer__"] img {
+  width: 5.3vw;
+}
+
+@media (max-width: 650px) {
+  .header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__logo {
+    font-size: 40px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: center;
+  }
+  .main__text {
+    text-align: center;
+  }
+  .main__text-1 {
+    display: none;
+  }
+  .main__text-2 {
+    margin-top: 15%;
+  }
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px;
+  }
+  .footer [class^="footer__"] img {
+    width: 45px;
+    height: 45px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
